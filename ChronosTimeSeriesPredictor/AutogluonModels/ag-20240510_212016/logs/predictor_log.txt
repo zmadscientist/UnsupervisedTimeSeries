@@ -1,0 +1,47 @@
+Beginning AutoGluon training...
+AutoGluon will save models to 'AutogluonModels/ag-20240510_212016'
+=================== System Info ===================
+AutoGluon Version:  1.1.0
+Python Version:     3.9.18
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #116-Ubuntu SMP Wed Apr 17 09:17:56 UTC 2024
+CPU Count:          224
+GPU Count:          0
+Memory Avail:       424.04 GB / 440.61 GB (96.2%)
+Disk Space Avail:   61545.59 GB / 114157.16 GB (53.9%)
+===================================================
+Setting presets to: chronos_tiny
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'hyperparameters': {'Chronos': {'model_path': 'tiny'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'target',
+ 'verbosity': 2}
+
+Inferred time series frequency: '30min'
+Provided train_data has 1464 rows, 1 time series. Median time series length is 1464 (min=1464, max=1464). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2024-05-10 14:20:16
+Models that will be trained: ['Chronos[tiny]']
+Training timeseries model Chronos[tiny]. 
+	0.00    s     = Training runtime
+Training complete. Models trained: ['Chronos[tiny]']
+Total runtime: 0.01 s
+Best model: Chronos[tiny]
